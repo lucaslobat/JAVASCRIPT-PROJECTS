@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --bg-color: #f2a900;
+  --text-color: #023047;
+  --orange: #fb8500;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100vw;
+  height: 40vh;
+  font-family: "Red Hat Display", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 32rem;
+  background-color: rgba(255, 255, 255, 0.767);
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 2rem;
+}
