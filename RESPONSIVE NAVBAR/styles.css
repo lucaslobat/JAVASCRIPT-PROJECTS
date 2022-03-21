@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: grey;
+}
+
+a:visited {
+  color: black;
+}
+
+.flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-nav-toggle {
+  display: none;
+}
+.sr-only {
+  visibility: hidden;
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 1rem;
+  color: white;
+}
+
+.primary-navigation li > a {
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+/* Como máximo se aplican estas configuraciones HASTA  1440px */
+@media (max-width: 992px) {
+  .primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(20vh, 10rem) 2rem;
+    gap: 1.5rem;
+    display: none;
+    background: hsl(0 0% 0% / 0.3);
+  }
+
+  .visible {
+    display: flex;
+  }
+
+  .primary-navigation {
+    transform: translateX(0%);
+  }
+
+  .primary-navigation li > a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url("./icon-hamburger.svg");
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+}
