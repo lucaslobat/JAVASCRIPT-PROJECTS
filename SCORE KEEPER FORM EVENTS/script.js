@@ -1,5 +1,4 @@
-/* SELECTORS AND VARIABLES*/
-
+/* ############## SELECTORES Y VARIABLES ############## */
 let scoreP1 = 0;
 let scoreP2 = 0;
 
@@ -12,24 +11,10 @@ const resetButton = buttonsDiv.elements.resetButton;
 const spanP1 = document.querySelector('#player1');
 const spanP2 = document.querySelector('#player2');
 
-
-
 let bestOf = parseInt(selectBestOf.value);
 let isGameOver = false;
 
-
-
-/* LISTENERS AND FUNCTIONS */
-selectBestOf.addEventListener('change', (e) => {
-    bestOf = parseInt(e.target.value);
-    reset();
-    spanP1.textContent = scoreP1;
-    spanP2.textContent = scoreP2;
-    playerOneButton.disabled = false;
-    playerTwoButton.disabled = false;
-});
-
-
+/* ############## FUNCIONES ############## */
 addScore = (playerNum) =>{
     if(!isGameOver){
         if(playerNum === 1){
@@ -41,8 +26,6 @@ addScore = (playerNum) =>{
         }
     }
 
-
-    //MUY IMPORTANTE LA COMPARACIÓN CON ===
     if(scoreP1 === bestOf){
         isGameOver = true;
         playerOneButton.disabled = true;
@@ -61,20 +44,6 @@ addScore = (playerNum) =>{
     }
 }
 
-
-
-playerOneButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    addScore(1);
-});
-
-
-playerTwoButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    addScore(2);
-});
-
-
 reset = () => {
     scoreP1 = 0;
     scoreP2 = 0;
@@ -88,8 +57,32 @@ reset = () => {
 }
 
 
+/* ############## MANEJADORES DE EVENTO ############## */
+
+// Manejador de eventos para el elemento SELECT
+selectBestOf.addEventListener('change', (e) => {
+    bestOf = parseInt(e.target.value);
+    reset();
+    spanP1.textContent = scoreP1;
+    spanP2.textContent = scoreP2;
+    playerOneButton.disabled = false;
+    playerTwoButton.disabled = false;
+});
+
+// Manejador de eventos para el BOTON PLAYER 1
+playerOneButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    addScore(1);
+});
+
+// Manejador de eventos para el BOTON PLAYER 2
+playerTwoButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    addScore(2);
+});
+
+// Manejador de eventos para el BOTON RESET
 resetButton.addEventListener('click', (e) => {
     e.preventDefault();
     reset();
 });
-

@@ -24,10 +24,10 @@ body {
 
 .container {
   margin: 2rem 0rem;
-  background-color: #f0f0f0;
   border-radius: 1rem;
   max-width: 32rem;
   min-width: 32rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .content-box {
@@ -38,6 +38,7 @@ body {
 .select-container {
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -47,4 +48,54 @@ body {
 
 .loser {
   color: red;
+}
+
+.buttons-form {
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 7rem;
+  aspect-ratio: 3;
+  cursor: pointer;
+}
+
+button:nth-of-type(1) {
+  background: #3498db;
+  color: #fff;
+  border: none;
+}
+button:nth-of-type(2n) {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+}
+button:nth-of-type(3n) {
+  background: #34495e;
+  color: #fff;
+  border: none;
+}
+
+button:nth-of-type(1):hover {
+  background: #2980b9;
+}
+
+button:nth-of-type(1):active {
+  position: relative;
+  top: 0.2rem;
+}
+button:nth-of-type(2n):active {
+  position: relative;
+  top: 0.2rem;
+}
+button:nth-of-type(3n):active {
+  position: relative;
+  top: 0.2rem;
+}
+
+select {
+  background-color: #0563af;
+  color: white;
+  padding: 0.2rem;
+  border: none;
 }
