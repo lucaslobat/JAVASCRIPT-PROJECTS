@@ -8,8 +8,8 @@ const playerOneButton = buttonsDiv.elements.playerOneButton;
 const playerTwoButton = buttonsDiv.elements.playerTwoButton;
 const resetButton = buttonsDiv.elements.resetButton;
 
-const spanP1 = document.querySelector('#player1');
-const spanP2 = document.querySelector('#player2');
+const spanP1 = document.querySelector('#p1Span');
+const spanP2 = document.querySelector('#p2Span');
 
 let bestOf = parseInt(selectBestOf.value);
 let isGameOver = false;

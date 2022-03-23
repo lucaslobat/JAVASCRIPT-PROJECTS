@@ -55,34 +55,14 @@ body {
 }
 
 .button {
-  width: 7rem;
+  width: 9rem;
   aspect-ratio: 3;
   cursor: pointer;
   color: #fff;
   border: none;
-}
-
-button:nth-of-type(1) {
-  background: #3498db;
-}
-button:nth-of-type(2n) {
-  background: #e74c3c;
-}
-button:nth-of-type(3n) {
-  background: #34495e;
-}
-
-button:nth-of-type(1):active {
-  position: relative;
-  top: 0.2rem;
-}
-button:nth-of-type(2n):active {
-  position: relative;
-  top: 0.2rem;
-}
-button:nth-of-type(3n):active {
-  position: relative;
-  top: 0.2rem;
+  background-color: #0563af;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 select {
@@ -91,4 +71,13 @@ select {
   padding: 0.3rem;
   border: none;
   border-radius: 0.2rem;
+}
+
+.disabled {
+  background-color: #e5e5e5;
+  color: black;
+}
+
+#resetButton {
+  background-color: #fe6d73;
 }
