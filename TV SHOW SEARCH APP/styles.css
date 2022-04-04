@@ -1,0 +1,66 @@
+:root {
+    --grey: #959595;
+    --soft-grey: #e8e8e8;
+    --input-background: #fff;
+    --input-color: #99A3BA;
+    --input-border-focus: #275EFE;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.flex {
+    display:flex;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey);
+    padding:1rem;
+}
+
+.logo {
+    width:3rem;
+    aspect-ratio: 1;
+}
+
+input[name="q"]{
+    outline:none;
+    border-radius:.2rem;
+    padding:.4rem;
+    line-height:1.5rem;
+/*     color:var(--soft-grey); */
+    font-weight: 500;
+    font-family: inherit;
+    background: var(--input-background);
+    transition: border .5s ease;
+}
+
+.input_search:focus {
+    border-color: var(--input-border-focus);
+    outline: none;
+}
+
+
+.tvshow_container{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:1rem;
+}
+
+.tvshow_card{
+    flex-direction: column;
+    align-items: center;
+    max-width:30rem;
+    justify-content:center;
+    padding:2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    gap:2rem;
+    
+}

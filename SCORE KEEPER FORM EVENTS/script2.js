@@ -68,13 +68,15 @@ const reset = () => {
 
     playerOne.span.textContent = playerOne.score;
     playerTwo.span.textContent = playerTwo.score;
+
     playerOne.button.classList.remove('disabled');
     playerTwo.button.classList.remove('disabled');
+
     playerOne.button.disabled = false;
     playerTwo.button.disabled = false;
 
-    playerOne.span.classList.remove('winner');
-    playerTwo.span.classList.remove('loser');
+    playerOne.span.classList.remove('winner','loser');
+    playerTwo.span.classList.remove('loser','winner');
 
     isGameOver = false;
 }
